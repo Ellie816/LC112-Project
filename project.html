@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emoji Circle</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="home-page">
+    <div class="background">
+        <div class="circle">
+            <div class="title" id="title">Hover Title</div> <!-- Fixed title container -->
+            <div class="emoji-container" id="emoji1" data-title="Weather in Boston">
+                <a href="page1.html" class="emoji">🌦️</a>
+            </div>
+            <div class="emoji-container" id="emoji2" data-title="Favorite Place to Eat On and Off Campus">
+                <a href="page2.html" class="emoji">🥡</a>
+            </div>
+            <div class="emoji-container" id="emoji3" data-title="Favorite Dorm and Study Spot">
+                <a href="page3.html" class="emoji">📝</a>
+            </div>
+            <div class="emoji-container" id="emoji4" data-title="Overall Experience at BU">
+                <a href="page4.html" class="emoji">🤦🏻‍♀️</a>
+            </div>
+            <div class="emoji-container" id="emoji5" data-title="What to Do if You Get Sick?">
+                <a href="page5.html" class="emoji">🤧</a>
+            </div>
+            <div class="emoji-container" id="emoji6" data-title="Favorite Experiences On and Off Campus">
+                <a href="page6.html" class="emoji">🎾</a>
+            </div>
+            <div class="emoji-container" id="emoji7" data-title="Want to Rent an Apartment in Boston?">
+                <a href="page7.html" class="emoji">🏠</a>
+            </div>
+        </div>        
+    </div>
+
+    <script>
+        const title = document.getElementById('title');
+const emojiContainers = document.querySelectorAll('.emoji-container');
+
+emojiContainers.forEach(container => {
+    container.addEventListener('mouseenter', () => {
+        const text = container.getAttribute('data-title');
+        title.textContent = text;
+        title.style.opacity = '1'; // Show the title
+    });
+
+    container.addEventListener('mouseleave', () => {
+        title.style.opacity = '0'; // Hide the title when not hovering
+    });
+});
+    </script>
+</body>
+</html>
