@@ -1,15 +1,169 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page 3 - 😍</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>我最喜欢的学习地方</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('corkboard.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            overflow-y: auto; /* Enables vertical scrolling */
+            text-align: center; /* Center text */
+        }
+
+        h1 {
+            font-family: 'Brush Script MT', cursive;
+            font-size: 4rem;
+            text-align: center;
+            margin: 30px 0;
+            color: #fff;
+            text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.6);
+        }
+
+        .content {
+            width: 80%;
+            max-width: 1200px;
+            padding: 20px;
+        }
+
+        .main-box {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            border: 2px solid #ccc;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+            font-size: 1.2rem;
+            line-height: 1.8;
+            font-family: 'Arial', sans-serif;
+            color: #333;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+
+        .images {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .polaroid {
+            width: 200px;
+            height: 250px;
+            background-color: white;
+            border: 6px solid white;
+            border-bottom-width: 10px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+            position: relative;
+            overflow: hidden;
+            transform: rotate(-5deg);
+            transition: transform 0.3s ease;
+            margin-bottom: 20px;
+        }
+
+        .polaroid img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .polaroid-caption {
+            position: absolute;
+            bottom: 10px;
+            left: 0;
+            right: 0;
+            font-size: 1rem;
+            color: #000;
+            text-align: center;
+            font-family: 'Brush Script MT', cursive;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+            background-color: rgba(255, 255, 255, 0.7);
+            padding: 5px;
+        }
+
+        .new-image {
+            position: relative;
+            width: 200px;
+            height: 250px;
+            background-color: white;
+            border: 6px solid white;
+            border-bottom-width: 10px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+            transform: rotate(0deg);
+            margin-bottom: 20px;
+        }
+
+        .new-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .new-image-caption {
+            position: absolute;
+            bottom: 10px;
+            left: 0;
+            right: 0;
+            font-size: 1rem;
+            color: #000;
+            text-align: center;
+            font-family: 'Brush Script MT', cursive;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+            background-color: rgba(255, 255, 255, 0.7);
+            padding: 5px;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .polaroid, .new-image {
+                width: 180px;
+                height: 220px;
+            }
+        }
+    </style>
 </head>
 <body>
+    <h1>我最喜欢的学习地方</h1>
     <div class="content">
-        <h1>Page 3 - 😍</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce a libero convallis, volutpat nisi eget, posuere ipsum. Sed venenatis purus et lectus varius, vel volutpat magna sodales. Quisque nec odio eget ligula elementum interdum. Donec hendrerit dui vitae enim tincidunt, in consequat odio gravida.</p>
+        <div class="main-box">
+            <p>我最喜欢的学习的地方在CDS的十六楼。因为这地方很安静, 外面的景色也很漂亮，一楼有一家咖啡馆。CDS在波士顿大学的中间，离地铁很近。图书馆, "CAS Think Tank", 神学校图书馆, 都是很好的学习地方。图书馆也开放至晚上 二 点，很方便。宿舍不适合学习因为宿舍很大声。</p>
+        </div>
+
+        <div class="images">
+            <div class="polaroid">
+                <img src="CDS-building-study.jpg" alt="CDS外景">
+                <div class="polaroid-caption">CDS房子</div>
+            </div>
+            <div class="polaroid">
+                <img src="CDS-interior-study.jpg" alt="CDS内部">
+                <div class="polaroid-caption">CDS十七楼</div>
+            </div>
+            <div class="polaroid">
+                <img src="CDS-study.jpg" alt="CDS学习区">
+                <div class="polaroid-caption">CDS一楼</div>
+            </div>
+            <div class="polaroid">
+                <img src="mugar-study.jpg" alt="Mugar图书馆">
+                <div class="polaroid-caption">图书馆</div>
+            </div>
+            <div class="polaroid">
+                <img src="theology-library-study.jpg" alt="神学校图书馆">
+                <div class="polaroid-caption">神学校图书馆</div>
+            </div>
+            <div class="new-image">
+                <img src="cas-think-tank.jpg" alt="CAS Think Tank">
+                <div class="new-image-caption">CAS Think Tank</div>
+            </div>
+        </div>
     </div>
 </body>
 </html>
