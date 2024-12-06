@@ -1,15 +1,204 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page 7 - 😇</title>
-    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('corkboard.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center top;
+        }
+        h1 {
+            text-align: center;
+            font-size: 39px;
+            color: #000000;
+            margin-top: 20px;
+            text-shadow: #393443;
+            font-weight: bolder;
+        }
+        .wrapper {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+        .paper {
+            width: 45%;
+            background-image: url('lined-paper.jpg'); /* Set background image for the text box */
+            background-size: cover;
+            background-repeat: no-repeat;
+            padding: 0px;
+            padding-left: 50px; /* Add left margin */
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            color: #333; /* Ensures text is readable over the background */
+            transition: transform 0.3s ease-in-out;
+        }
+        .paper:hover {
+            transform: scale(1.05); /* Slightly enlarge the paper on hover */
+        }
+        .paper h2 {
+            text-align: center;
+            font-size: 28px;
+            color: #444;
+            margin-bottom: 10px;
+        }
+        .paper ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        .paper li {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        .images {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .image-container {
+            display: inline-block;
+            margin: 0 15px;
+            text-align: center;
+            position: relative;
+        }
+        .polaroid {
+            background-color: white;
+            border: 10px solid #ddd;
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 10px;
+            position: relative;
+            width: 300px;
+            height: 300px;
+            overflow: hidden;
+            transition: transform 0.3s ease-in-out;
+        }
+        .polaroid:hover {
+            transform: scale(1.1); /* Zoom in effect on hover */
+        }
+        .polaroid img {
+            width: 100%;
+            height: 85%;
+            object-fit: cover;
+            border-bottom: 30px solid white;
+        }
+        .label {
+            position: absolute;
+            bottom: 5px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 14px;
+            font-weight: bold;
+            color: #333;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+            transition: color 0.3s ease;
+        }
+        .polaroid:hover .label {
+            color: #ff6347; /* Change label color on hover */
+        }
+
+        /* Button to reveal additional information */
+        .reveal-btn {
+            display: inline-block;
+            background-color: #ff6347;
+            color: white;
+            padding: 10px 20px;
+            font-size: 18px;
+            border-radius: 5px;
+            text-align: center;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+        }
+        .reveal-btn:hover {
+            background-color: #ff4500; /* Darker red on hover */
+        }
+        .extra-info {
+            display: none;
+            margin-top: 10px;
+            font-size: 16px;
+            color: #555;
+        }
+        .extra-info.visible {
+            display: block;
+        }
+    </style>
 </head>
 <body>
-    <div class="content">
-        <h1>Page 7 - 😇</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce a libero convallis, volutpat nisi eget, posuere ipsum. Sed venenatis purus et lectus varius, vel volutpat magna sodales. Quisque nec odio eget ligula elementum interdum. Donec hendrerit dui vitae enim tincidunt, in consequat odio gravida.</p>
+
+    <h1>宿舍vs公寓</h1>
+
+    <div class="wrapper">
+        <div class="paper">
+            <h2>宿舍的优点</h2>
+            <ul>
+                <li>住在学校外面可能很难。</li>
+                <li>宿舍比租公寓便宜得多。</li>
+                <li>宿舍离学校很近，有餐厅，附近还有用的大学地方。</li>
+                <li>波士顿大学宿舍里有家具。</li>
+                <li>你们可以决定住在只有卧室的宿舍，还是有卧室、厨房和卫生间的宿舍。</li>
+            </ul>
+
+            <h2>宿舍的缺点</h2>
+            <ul>
+                <li>宿舍可能没有私人空间。</li>
+                <li>宿舍的设施可能比较基础。</li>
+            </ul>
+        </div>
+
+        <div class="paper">
+            <h2>公寓的优点</h2>
+            <ul>
+                <li>租一套公寓也可以。</li>
+                <li>你们可以在网上找到公寓广告。</li>
+                <li>公寓可能离波士顿大学远，所以你可以坐地铁去上课。</li>
+                <li>找一个室友可以让住在公寓里更便宜。</li>
+            </ul>
+
+            <h2>公寓的缺点</h2>
+            <ul>
+                <li>公寓不但没有家具，而且可能更贵。</li>
+                <li>公寓可能离学校较远。</li>
+            </ul>
+        </div>
     </div>
+
+    <div class="images">
+        <div class="image-container">
+            <div class="polaroid">
+                <img src="stuvi2.jpg" alt="Dorm">
+                <div class="label">宿舍</div>
+            </div>
+        </div>
+        <div class="image-container">
+            <div class="polaroid">
+                <img src="apartment.webp" alt="Apartment">
+                <div class="label">公寓</div>
+            </div>
+        </div>
+        <div class="image-container">
+            <div class="polaroid">
+                <img src="dining-hall.jpg" alt="Dining Hall">
+                <div class="label">餐厅</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="reveal-btn" onclick="toggleInfo()">更多信息</div>
+    <div class="extra-info" id="extra-info">
+        <p>这里是更多关于宿舍和公寓的对比内容，可以加入一些有趣的细节或个人体验。</p>
+    </div>
+
+    <script>
+        function toggleInfo() {
+            const extraInfo = document.getElementById('extra-info');
+            extraInfo.classList.toggle('visible');
+        }
+    </script>
+
 </body>
 </html>

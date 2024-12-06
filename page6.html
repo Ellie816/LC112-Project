@@ -1,15 +1,154 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page 6 - 🥺</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>我的波士顿大学之旅</title>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <style>
+    /* Set the paper background */
+    body {
+      background-image: url('paper-background.jpg');
+      background-size: cover;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+    }
+
+    /* Styling the main image with a cute border */
+    .main-img {
+      width: 60%;
+      margin: 20px auto;
+      display: block;
+      border: 10px solid #f0c6a5;
+      border-radius: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Add some padding and styling to the image grid */
+    .w3-row-padding {
+      padding: 20px;
+    }
+
+    /* Styling the thumbnails as cute Polaroids */
+    .demo {
+      border: 2px solid #f0c6a5;
+      border-radius: 10px;
+      transition: 0.3s;
+      padding: 5px;
+      background-color: white;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .demo:hover {
+      opacity: 0.7;
+    }
+
+    /* Thumbnails in Polaroid style */
+    .thumbnail {
+      width: 80%; /* Adjusted thumbnail size */
+      margin: 10px auto;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+
+    .thumbnail:hover {
+      transform: scale(1.1);
+    }
+
+    /* Larger font for the Chinese text */
+    h2, p {
+      font-size: 2em;  /* Increased font size */
+      font-family: 'Pacifico', cursive;
+    }
+
+    /* Box behind the text at the top */
+    .header-box, .footer-box {
+      background-color: rgba(255, 255, 255, 0.8);
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Styling for the content box */
+    .header-box {
+      margin-top: 10px;
+    }
+
+    .footer-box {
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+
+  </style>
+  <!-- Import a cute handwritten-style font -->
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="content">
-        <h1>Page 6 - 🥺</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce a libero convallis, volutpat nisi eget, posuere ipsum. Sed venenatis purus et lectus varius, vel volutpat magna sodales. Quisque nec odio eget ligula elementum interdum. Donec hendrerit dui vitae enim tincidunt, in consequat odio gravida.</p>
+
+<div class="w3-container header-box">
+
+  <p>我在波士顿大学最喜的地方是波士顿海边，波士顿海滨大道，和波士顿公园。我也非常喜欢我的帆船课，结识了很多朋友。</p>
+</div>
+
+<div class="w3-content" style="max-width:1200px">
+  <!-- Main image with a cute border -->
+  <img class="mySlides main-img" src="sailing_pics\000050930013.jpg" style="display:none">
+  <img class="mySlides main-img" src="sailing_pics\000050930005.jpg" style="display:none">
+  <img class="mySlides main-img" src="sailing_pics\hehe.png" style="display:none">
+  <img class="mySlides main-img" src="sailing_pics\000050930007.jpg" style="display:none">
+  <img class="mySlides main-img" src="sailing_pics\000050930006.jpg" style="display:none">
+  <img class="mySlides main-img" src="sailing_pics\000050930004.jpg" style="display:none">
+  
+  <div class="w3-row-padding w3-section">
+    <!-- Thumbnails for the gallery in Polaroid style -->
+    <div class="w3-col s2">
+      <img class="demo thumbnail w3-opacity w3-hover-opacity-off" src="sailing_pics\000050930013.jpg" onclick="currentDiv(1)">
     </div>
+    <div class="w3-col s2">
+      <img class="demo thumbnail w3-opacity w3-hover-opacity-off" src="sailing_pics\000050930005.jpg" onclick="currentDiv(2)">
+    </div>
+    <div class="w3-col s2">
+      <img class="demo thumbnail w3-opacity w3-hover-opacity-off" src="sailing_pics\hehe.png" onclick="currentDiv(3)">
+    </div>
+    <div class="w3-col s2">
+      <img class="demo thumbnail w3-opacity w3-hover-opacity-off" src="sailing_pics\000050930007.jpg" onclick="currentDiv(4)">
+    </div>
+    <div class="w3-col s2">
+      <img class="demo thumbnail w3-opacity w3-hover-opacity-off" src="sailing_pics\000050930006.jpg" onclick="currentDiv(5)">
+    </div>
+    <div class="w3-col s2">
+      <img class="demo thumbnail w3-opacity w3-hover-opacity-off" src="sailing_pics\000050930004.jpg" onclick="currentDiv(6)">
+    </div>
+  </div>
+</div>
+
+<div class="w3-container footer-box">
+  <p>我在波士顿大学最喜的地方是波士顿海边，波士顿海滨大道，和波士顿公园。我平常在课堂上认识新朋友。我有很多来不同的城市和国家的同学。今年我在波士顿大学最喜欢的活动是帆船课。我认识了很多好朋友，课程也很有意思。波士顿海滨大道和查尔斯河在秋天都很美丽。</p>
+  <p>波士顿人很友好，别担心，你们会认识很多朋友。</p>
+</div>
+
+<script>
+// Slideshow Function to change images automatically
+var slideIndex = 0;
+showDivs();
+
+function showDivs() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > x.length) {slideIndex = 1}    
+  x[slideIndex - 1].style.display = "block";  
+  setTimeout(showDivs, 3000); // Change image every 3 seconds
+}
+
+function currentDiv(n) {
+  slideIndex = n - 1;
+  showDivs();
+}
+</script>
+
 </body>
 </html>
