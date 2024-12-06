@@ -3,13 +3,173 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page 2 - 😂</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>BU Dining Halls</title>
+    <style>
+        body {
+            font-family: 'Georgia', serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            background: #f9f5ec; /* Neutral background */
+        }
+
+        h1 {
+            font-family: 'Brush Script MT', cursive;
+            margin-top: 20px;
+            color: rgb(81, 8, 8);
+            font-size: 3em;
+            text-align: left;
+            padding-left: 20px;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: row; /* Align items in a row (side by side) */
+            padding: 20px;
+            background: rgba(252, 240, 230, 0.9); /* Slight transparency for parchment effect */
+            border-right: 5px solid #c4a484;
+            box-shadow: 5px 0 10px rgba(0, 0, 0, 0.1);
+            position: relative;
+            margin-bottom: 30px; /* Space between sections */
+        }
+
+        .container::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url("paper-background.jpg");
+            background-size: cover;
+            opacity: 0.2;
+
+        }
+
+        .map {
+            position: relative;
+            max-width: 60%; /* Made the map smaller */
+            margin-right: 40px; /* Increased space between the image and text */
+            border: 10px solid #c4a484; /* Retro border */
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .map img {
+            width: 100%;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .pin {
+            position: absolute;
+            font-size: 24px; /* Emoji size */
+            cursor: pointer;
+            transform: translate(-50%, -50%); /* Center the pin */
+            transition: transform 0.3s ease, filter 0.3s ease;
+        }
+
+        .pin:hover {
+            transform: translate(-50%, -50%) scale(1.2); /* Slight zoom on hover */
+            filter: drop-shadow(0 0 5px orange); /* Glowing effect */
+        }
+
+        .text {
+            flex: 0 0 32%; /* Make the text box smaller */
+            font-size: 16px;
+            line-height: 1.8;
+            background: #fff; /* White box for contrast */
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            margin-top: 30px; /* Added margin to move text further below */
+            overflow-y: auto;
+            margin-bottom: 30px; /* Space between bottom map and text box */
+        }
+
+        .highlight {
+            color: #0e0101;
+            font-weight:bolder;
+            transition: color 0.3s ease;
+        }
+
+        .highlight.active {
+            color: orange;
+        }
+    </style>
 </head>
 <body>
-    <div class="content">
-        <h1>Page 2 - 😂</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce a libero convallis, volutpat nisi eget, posuere ipsum. Sed venenatis purus et lectus varius, vel volutpat magna sodales. Quisque nec odio eget ligula elementum interdum. Donec hendrerit dui vitae enim tincidunt, in consequat odio gravida.</p>
+    <h1>我最喜欢的餐馆</h1>
+
+    <div class="container">
+        <!-- First Section: BU Dining Halls Map -->
+        <div class="map">
+            <img src="bu-dining-halls-map.png" alt="BU Dining Halls Map">
+            <!-- Pinpoints -->
+            <div class="pin" style="top: 50%; left: 90%;" data-dining="fenway">📍</div>
+            <div class="pin" style="top: 30%; left: 50%;" data-dining="granby">📍</div>
+            <div class="pin" style="top: 40%; left: 40%;" data-dining="marciano">📍</div>
+            <div class="pin" style="top: 50%; left: 60%;" data-dining="warren">📍</div>
+            <div class="pin" style="top: 60%; left: 70%;" data-dining="west">📍</div>
+        </div>
+
+        <!-- First Text Section -->
+        <div class="text">
+            波士顿大学里有很多快餐店, 在那儿你可以用饭卡。波士顿大学有五个餐厅:
+            <span class="highlight" id="fenway">Fenway</span>, 
+            <span class="highlight" id="granby">Granby</span>, 
+            <span class="highlight" id="marciano">Marciano</span>, 
+            <span class="highlight" id="warren">Warren Towers</span>, 和 
+            <span class="highlight" id="west">West</span>。
+            我觉得, <span style="font-family: Courier New">Marciano</span> 餐厅好吃。
+            波士顿大学的餐厅十月十九日还有龙虾日。但是饭馆比大学餐厅好吃多了。
+        </div>
     </div>
+
+    <div class="container">
+        <!-- Second Section: Downtown Boston Map -->
+        <div class="map">
+            <img src="downtown-boston-map.png" alt="Downtown Boston Map">
+            <!-- Pinpoints for Restaurants -->
+            <div class="pin" style="top: 30%; left: 40%;" data-dining="fuchun">📍</div>
+            <div class="pin" style="top: 50%; left: 55%;" data-dining="legal-seafood">📍</div>
+            <div class="pin" style="top: 60%; left: 65%;" data-dining="the-merchant">📍</div>
+        </div>
+
+        <!-- Second Text Section -->
+        <div class="text">
+            如果你吃素，波士顿大学的很多餐馆都有素菜。 中国城有好吃的中国菜。
+            
+            <span class="highlight" id="fuchun">富春居</span>
+            
+            
+            
+            是我最喜欢的中国餐馆，因为他们的小笼包好吃极了。波士顿有很多有名的海鲜餐厅。我最喜欢两元的牡蛎在 
+
+            <span class="highlight" id="the-merchant">"The Merchant"</span>
+
+            和 
+
+            <span class="highlight" id="legal-seafood">"Legal Seafood"</span>。
+        </div>
+    </div>
+
+    <script>
+        // Add hover interactivity for both maps
+        const pins = document.querySelectorAll('.pin');
+        const highlights = document.querySelectorAll('.highlight');
+
+        pins.forEach(pin => {
+            pin.addEventListener('mouseenter', () => {
+                const diningHall = pin.getAttribute('data-dining');
+                document.querySelectorAll(`#${diningHall}`).forEach(el => el.classList.add('active'));
+            });
+            pin.addEventListener('mouseleave', () => {
+                const diningHall = pin.getAttribute('data-dining');
+                document.querySelectorAll(`#${diningHall}`).forEach(el => el.classList.remove('active'));
+            });
+        });
+    </script>
 </body>
 </html>
