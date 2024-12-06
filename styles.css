@@ -29,7 +29,7 @@ body.home-page {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: rgba(255, 255, 255, 0.7); /* White with translucency */
+    background: rgba(158, 153, 153, 0.7); /* White with translucency */
     background: linear-gradient(to center, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.1));
 }
 
@@ -68,6 +68,8 @@ body.home-page {
     padding: 20px 15px; /* Add padding for the highlight */
     background-color: rgb(179, 39, 39); 
 }
+
+
 
 /* Each emoji container */
 .emoji-container {
