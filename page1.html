@@ -3,13 +3,143 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page 1 - 😀</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>波士顿的天气</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Georgia', serif;
+            background: #f8f0e3; /* Off-white paper-like background */
+            background-image: url('corkboard.jpg'); /* Paper texture */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            gap: 20px;
+            padding: 20px;
+
+        }
+
+
+
+
+        
+        h1 {
+            position: relative;
+            font-size: 3em;
+            font-weight: bold;
+            color: #fcf9f9; 
+            text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.2), 0 0 25px rgba(15, 3, 0, 0.5); /* Stronger text shadow */
+            padding: 10px;
+            text-align: center;
+            letter-spacing: 2px;
+            z-index: 2; /* Makes sure the text is on top */
+        }
+        
+
+        
+
+
+        .polaroid-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 20px;
+            max-width: 800px;
+            width: 100%;
+        }
+
+        .polaroid {
+            background: white;
+            border: 2px solid #e0dfd5;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+            padding: 10px;
+            border-radius: 5px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            position: relative;
+            transition: transform 0.3s, box-shadow 0.3s, color 0.3s;
+        }
+
+        .polaroid:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+
+        .polaroid:hover h2 {
+            color: #e74c3c; /* Changes to red on hover */
+        }
+
+        .polaroid:hover p {
+            color: #3498db; /* Changes to blue on hover */
+        }
+
+        .polaroid img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 3px;
+        }
+
+        .polaroid h2 {
+            margin: 10px 0 5px;
+            font-size: 1.5em;
+            color: #34495e;
+            transition: color 0.3s;
+        }
+
+        .polaroid p {
+            margin: 0;
+            font-size: 1em;
+            color: #555;
+            transition: color 0.3s;
+        }
+
+        .tape {
+            width: 50px;
+            height: 15px;
+            background: rgba(255, 255, 255, 0.7);
+            position: absolute;
+            top: -10px;
+            left: 50%;
+            transform: translateX(-50%) rotate(-3deg);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .tape:nth-child(odd) {
+            transform: translateX(-50%) rotate(3deg);
+        }
+    </style>
 </head>
 <body>
-    <div class="content">
-        <h1>Page 1 - 😀</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce a libero convallis, volutpat nisi eget, posuere ipsum. Sed venenatis purus et lectus varius, vel volutpat magna sodales. Quisque nec odio eget ligula elementum interdum. Donec hendrerit dui vitae enim tincidunt, in consequat odio gravida.</p>
+    <h1>波士顿的天气</h1>
+    <div class="polaroid-container">
+        <div class="polaroid">
+            <div class="tape"></div>
+            <img src="https://www.boston-discovery-guide.com/image-files/x800-boston-common-freedom-trail-statehouse.jpg.pagespeed.ic.8MYwqhGS77.webp" alt="春天">
+            <h2>春天</h2>
+            <p>波士顿春天很漂亮。春天不太热和也不太冷。春天是在波士顿公园散步的最佳温度。</p>
+        </div>
+        <div class="polaroid">
+            <div class="tape"></div>
+            <img src="https://www.tripsavvy.com/thmb/LAuTqjFWhVC4EOms8bEmipmej9k=/960x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-172949475-5c0edc9a4cedfd0001ff748a.jpg" alt="夏天">
+            <h2>夏天</h2>
+            <p>波士顿的夏天平常热和潮湿。夏天你可以游泳，冲浪，和划船。</p>
+        </div>
+        <div class="polaroid">
+            <div class="tape"></div>
+            <img src="https://www.bostonteapartyship.com/wp-content/uploads/2023/03/boston-fall.jpg" alt="秋天">
+            <h2>秋天</h2>
+            <p>波士顿的秋天也很美丽。秋天的天气有点凉，但很舒服凉快。</p>
+        </div>
+        <div class="polaroid">
+            <div class="tape"></div>
+            <img src="https://media.timeout.com/images/105733448/750/562/image.webp" alt="冬天">
+            <h2>冬天</h2>
+            <p>冬天不但非常冷，而且常常下雪。你应该买一件帽子和一件保暖外套。虽然冬天很冷，你可以滑冰和滑雪，都好玩儿。</p>
+        </div>
     </div>
 </body>
 </html>
