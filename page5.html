@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <title>What To Do If You Get Sick</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>What To Do If You Get Sick?</title>
+    <title>Interactive Corkboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=The+Girl+Next+Door&family=Roboto:wght@400;400&display=swap" rel="stylesheet">
     <style>
         @layer demo.support {
             h1 {
@@ -12,15 +14,15 @@
                 align-items: center;
 
                 text-transform: uppercase;
-                font-size: 10em; /* Adjusted for smaller size */
-                font-weight: 1200; /* Reduced weight */
+                font-size: 10em; 
+                font-weight: 80; 
                 line-height: 0.8;
                 color: white;
-                -webkit-text-stroke: 4px black; /* Slightly smaller stroke */
+                -webkit-text-stroke: 4px black; 
                 
                 
                 > span:first-of-type {
-                    font-size: 10em; /* Reduced size for first span */
+                    font-size: 10em; 
                 }
                 
                 > div {
@@ -41,10 +43,12 @@
             body {
                 min-block-size: 100%;
                 font-family: system-ui, sans-serif;
+                font-weight: 1000;
 
-                display: grid;
-                place-content: center;
-                gap: 10vmin; /* Reduced gap between elements */
+                display: flex;
+
+
+
             }
 
             section {
@@ -127,13 +131,13 @@
             height: 100%;
             position: absolute;
             backface-visibility: hidden;
-            border: 1px solid #b38b6d;
-            border-radius: 5px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+            border: 5px groove #7f5d42;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(139, 105, 64, 0.15);
         }
 
         .note-front {
-            background: linear-gradient(135deg, #fff5ba, #ffd391);
+            background: linear-gradient(135deg, #f3e4b4, #efbc63);
             display: flex;
             flex-direction: column;
             justify-content: flex-start;
@@ -155,6 +159,7 @@
             font-size: 14px; /* Smaller text size */
             color: #5a3a24;
             text-align: center;
+            padding-top: 10%;
         }
 
         .note-back {
@@ -230,4 +235,3 @@
     </div>
 </body>
 </html>
-
