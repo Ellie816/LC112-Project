@@ -17,11 +17,13 @@
         }
         h1 {
             text-align: center;
-            font-size: 39px;
-            color: #000000;
-            margin-top: 20px;
-            text-shadow: #393443;
-            font-weight: bolder;
+            font-size: 4rem;
+            color: #fdfdfd;
+            display: block;
+            font-family: 'Brush Script MT', cursive;
+            text-shadow: 4px 4px 3px rgba(52, 50, 50, 0.848);
+            ;
+ 
         }
         .wrapper {
             display: flex;
@@ -34,7 +36,7 @@
             background-size: cover;
             background-repeat: no-repeat;
             padding: 0px;
-            padding-left: 50px; /* Add left margin */
+            padding-left: 0px; /* Add left margin */
             border-radius: 10px;
             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
             color: #333; /* Ensures text is readable over the background */
@@ -45,17 +47,19 @@
         }
         .paper h2 {
             text-align: center;
-            font-size: 28px;
+            font-size: 25px;
             color: #444;
-            margin-bottom: 10px;
+
         }
         .paper ul {
             list-style-type: none;
             padding-left: 0;
         }
         .paper li {
-            font-size: 18px;
-            margin-bottom: 20px;
+            font-size: 14px;
+            margin-bottom: 10px;
+            padding-left: 15%;
+            padding-right: 5%
         }
         .images {
             text-align: center;
@@ -69,12 +73,12 @@
         }
         .polaroid {
             background-color: white;
-            border: 10px solid #ddd;
+            border: 10px solid #ffffff;
             box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
             margin-bottom: 10px;
             position: relative;
-            width: 300px;
-            height: 300px;
+            width: 250px;
+            height: 250px;
             overflow: hidden;
             transition: transform 0.3s ease-in-out;
         }
@@ -89,7 +93,7 @@
         }
         .label {
             position: absolute;
-            bottom: 5px;
+            bottom: 3%;
             left: 50%;
             transform: translateX(-50%);
             font-size: 14px;
@@ -102,46 +106,19 @@
             color: #ff6347; /* Change label color on hover */
         }
 
-        /* Button to reveal additional information */
-        .reveal-btn {
-            display: inline-block;
-            background-color: #ff6347;
-            color: white;
-            padding: 10px 20px;
-            font-size: 18px;
-            border-radius: 5px;
-            text-align: center;
-            cursor: pointer;
-            margin-top: 20px;
-            transition: background-color 0.3s ease;
-        }
-        .reveal-btn:hover {
-            background-color: #ff4500; /* Darker red on hover */
-        }
-        .extra-info {
-            display: none;
-            margin-top: 10px;
-            font-size: 16px;
-            color: #555;
-        }
-        .extra-info.visible {
-            display: block;
-        }
+
+
     </style>
 </head>
 <body>
 
-    <h1>宿舍vs公寓</h1>
+    <h1>宿舍  ~ 还是 ~  公寓</h1>
 
     <div class="wrapper">
         <div class="paper">
             <h2>宿舍的优点</h2>
             <ul>
-                <li>住在学校外面可能很难。</li>
-                <li>宿舍比租公寓便宜得多。</li>
-                <li>宿舍离学校很近，有餐厅，附近还有用的大学地方。</li>
-                <li>波士顿大学宿舍里有家具。</li>
-                <li>你们可以决定住在只有卧室的宿舍，还是有卧室、厨房和卫生间的宿舍。</li>
+                <li>住在学校外面可能很难。宿舍比租公寓便宜得多。宿舍离学校很近，有餐厅，附近还有用的大学地方。波士顿大学宿舍里有家具。你们可以决定住在只有卧室的宿舍，还是有卧室、厨房和卫生间的宿舍。</li>
             </ul>
 
             <h2>宿舍的缺点</h2>
@@ -154,10 +131,7 @@
         <div class="paper">
             <h2>公寓的优点</h2>
             <ul>
-                <li>租一套公寓也可以。</li>
-                <li>你们可以在网上找到公寓广告。</li>
-                <li>公寓可能离波士顿大学远，所以你可以坐地铁去上课。</li>
-                <li>找一个室友可以让住在公寓里更便宜。</li>
+                <li>租一套公寓也可以。你们可以在网上找到公寓广告。公寓可能离波士顿大学远，所以你可以坐地铁去上课。找一个室友可以让住在公寓里更便宜。</li>
             </ul>
 
             <h2>公寓的缺点</h2>
@@ -177,7 +151,7 @@
         </div>
         <div class="image-container">
             <div class="polaroid">
-                <img src="apartment.jpg" alt="Apartment">
+                <img src="apartment.webp" alt="Apartment">
                 <div class="label">公寓</div>
             </div>
         </div>
@@ -189,10 +163,6 @@
         </div>
     </div>
 
-    <div class="reveal-btn" onclick="toggleInfo()"></div>
-    <div class="extra-info" id="extra-info">
-        <p>这里是更多关于宿舍和公寓的对比内容，可以加入一些有趣的细节或个人体验。</p>
-    </div>
 
     <script>
         function toggleInfo() {
